@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to render tasks
   function renderTask() {
-    taskContainerToDo.innerHTML = ""; // Clear the container before rendering
+    taskContainerToDo.innerHTML = ""; 
     arrTask.forEach((task) => {
       const tasks = createElem(task);
       taskContainerToDo.appendChild(tasks);
@@ -131,10 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
     dialogueBoxAddTaskBtn.addEventListener("click", addTaskHandler);
   }
 
-  // Function to handle task addition
+ 
   function addTaskHandler() {
     if (!taskTitleInput.value.trim() || !taskDescription.value.trim()) {
-      return; // Prevent adding empty tasks
+      return; 
     }
 
     const newTask = {
@@ -152,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dialogueBox.style.display = "none";
   }
 
-  // Show dialogue box when "Add Task" button is clicked
   addBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       dialogueBox.style.display = "flex";
